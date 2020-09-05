@@ -1,52 +1,45 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>ElectriTrackerPhone</title>
-    <!-- ElectriTrackerPhone references -->
+
     <link href="css/index.css" rel="stylesheet" />
+
+    <script src="scripts/lib/angular.min.js"></script>
+    <script src="scripts/lib/angular-animate.min.js"></script>
+    <script src="scripts/lib/angular-route.min.js"></script>
+    <script src="scripts/lib/ng-cordova.min.js"></script>
+
+    <script src="cordova.js"></script>
+    <script src="scripts/lib/platformOverrides.js"></script>
+    <script src="scripts/lib/fastclick.js"></script>
+
+    <script src="scripts/lib/jquery-2.1.4.min.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/changeURL.js"></script>
+    <script src="scripts/controllers/register.js"></script>
+    <script src="scripts/controllers/application.js"></script>
+    <script>localStorage.setItem("URL", "http://electritracker.azurewebsites.net");</script>
+
+    <script>
+        
+    </script>
 </head>
 
-<body>
-    <header id="header">
-       <div id="numeElectrician"></div>
-       <!--<form action="http://localhost:49705/api/tracker/SendGpsPosition" method="POST">
-            <label for="nume">Nume complet: </label>
-            <input name="Nume electrician" type="text" value="Nume complet" id="nume"><br />
-            <label for="numarTel">Numar telefon: </label>
-            <input name="Numar telefon" type="text" value="Numar telefon" id="numar"><br />
-            <input type="submit" value="Gata" id="gata" />
-       </form>-->
-        <div id="form">
-            <label for="nume">Nume complet: </label>
-            <input name="Nume electrician" type="text" value="Nume complet" id="nume"><br />
-            <label for="numarTel">Numar telefon: </label>
-            <input name="Numar telefon" type="text" value="Numar telefon" id="numar"><br />
-            <input type="submit" value="Gata" id="gata" />
-        </div>
-
+<body id="body" ng-class="{'bgrosu':countOcupat, 'bgverde':countLiber,'bgurgenta': countUrgenta,'bgregister':registerPage || changingUrl}">
+    <header>
+        <div class="btn changeUrl" ng-click="changeURL()" ng-hide="changingUrl"></div>
+        <div class="header" ng-hide="registerPage||changingUrl" ng-bind="name"></div>
+        <div class="error" id="error"></div>
     </header>
-    <div id="container">
-        <center>
-            <button id="ocupat">Ocupat</button></br>
-            <button id="liber">Liber</button></br>
-            <button id="urgenta">Semnaleaza situatie </br> de urgenta</button>
-            <p style="color:red" id="mesaj"></p>
-        </center>
-    <!-- Cordova reference, this is added to your app when it's built. -->
-    <script src="cordova.js"></script>
-    <script src="scripts/platformOverrides.js"></script>
-    <script src="lib/fastclick.js"></script>
-    <script src="scripts/jquery-2.1.4.min.js"></script>
-    <script src="scripts/index.js"></script>
-    </div>
 
-    <div id="footer" >
-        <div id="semn1" class="warning"></div>
-        <div id="semn2" class="warning"></div>
-        <div id="eroare" style="display:none;" >EROARE CONEXIUNE</div>
-        &copy; VIANU,BASARAB,LOVINESCU ~2015 LLC
-    </div>
+    <main class="cf" ng-class="{'registerMain':registerPage}" ng-view id="main"> </main>
 
+    <footer>
+        <div class="cf footer" ng-include="'views/footer.html'"></div>
+    </footer>
 </body>
 </html>

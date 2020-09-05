@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SkiLessonsDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="skiTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Nume" Type="varchar" MaxLength="50" />
+    <Property Name="Latitudine" Type="float" />
+    <Property Name="Longitudine" Type="float" />
+    <Property Name="Baterie" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Urgenta" Type="int" />
+    <Property Name="Telefon" Type="varchar" MaxLength="11" />
+    <Property Name="IsAdmin" Type="int" />
+    <Property Name="VitezaDepasita" Type="int" />
+    <Property Name="InAfaraRazei" Type="int" />
+    <Property Name="id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SkiLessonsDatabaseModelStoreContainer">
+    <EntitySet Name="skiTable" EntityType="Self.skiTable" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,17 @@
+﻿<section class="register" data-ng-init="init()">
+    <img src="./images/icon (2).png" class="centre logo" />
+    <form name="myform">
+        <h2 class="title">Inregistrare</h2>
+        <input type="text" ng-model="user.name" name="name" placeholder="Nume complet" ng-required="true" ng-maxlength="15"><br />
+        <input type="text" ng-model="user.number" name="number" placeholder="Numar de telefon" ng-required="true" ng-minlength="10"><br />
+
+        <p class="error" ng-show="myform.$invalid">
+            *Ambele campuri sunt obligatorii.
+        </p>
+        <p class="error" ng-show="myform.name.$invalid && myform.name.$dirty">
+            *Numele trebuie sa contina maxim 15 caractere.
+        </p>
+        <button class="btn" ng-click="register(user.name, user.number)" ng-disabled="myform.$invalid" type="submit">Gata</button>
+
+    </form>
+</section>

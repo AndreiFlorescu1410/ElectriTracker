@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SkiLessonsDatabaseModelStoreContainer" CdmEntityContainer="SkiLessonsDatabaseEntities">
+    <EntitySetMapping Name="skiTable">
+      <EntityTypeMapping TypeName="SkiLessonsDatabaseModel.skiTable">
+        <MappingFragment StoreEntitySet="skiTable">
+          <ScalarProperty Name="Nume" ColumnName="Nume" />
+          <ScalarProperty Name="Latitudine" ColumnName="Latitudine" />
+          <ScalarProperty Name="Longitudine" ColumnName="Longitudine" />
+          <ScalarProperty Name="Baterie" ColumnName="Baterie" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Urgenta" ColumnName="Urgenta" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="VitezaDepasita" ColumnName="VitezaDepasita" />
+          <ScalarProperty Name="InAfaraRazei" ColumnName="InAfaraRazei" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,10 @@
+﻿<section class="application">
+    
+    <div name="page" ng-init="init()">
+        
+        <button class="btn " ng-class="{'rosu':countOcupat, 'gri':countLiber}" ng-click="ocupat()"  id="ocupat">Ocupat</button><br>
+        <button class="btn liber" ng-class="{'verde':countLiber, 'gri':countOcupat}" ng-click="liber()" id="liber">Liber</button><br>
+        <button class="btn urgenta" ng-class="{'oranj':countUrgenta, 'gri':!countUrgenta}" ng-click="urgenta()" ng-disabled="countLiber" id="urgenta">Semnaleaza situatie <br> de urgenta</button>
+            
+    </div>
+</section>

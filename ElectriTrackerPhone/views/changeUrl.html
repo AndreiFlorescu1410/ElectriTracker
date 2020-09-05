@@ -1,0 +1,10 @@
+﻿<section class="changeURL" data-ng-init="init()">
+    <form name="urlform" novalidate>
+        <h2 class=" title">
+            Inlocuire server
+        </h2>
+        <input type="text" ng-model="URL" name="URL" placeholder="URL-ul noului server" ng-required="true"><br />
+        <button class="btn back" ng-click="back()">Inapoi</button>
+        <button class="btn" ng-click="changeURL(URL)" ng-disabled="urlform.URL.$invalid">Gata</button>
+    </form>
+</section>

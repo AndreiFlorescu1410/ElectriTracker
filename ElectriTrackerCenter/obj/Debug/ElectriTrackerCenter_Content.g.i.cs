@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model1.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model1.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("skype4com.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("microsoft.maps.mapcontrol.wpf.dll")]
 
