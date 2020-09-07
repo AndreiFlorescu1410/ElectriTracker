@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="SkiLessonsDatabaseEntities-Web.config Connection String" description="SkiLessonsDatabaseEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=ski.database.windows.net;initial catalog=SkiLessonsDatabase;user id=skiadmin;password=parola123?;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\andre\\Source\\Workspaces\\ElectriTracker\\ElectriTracker\\ElectriTrackerService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SkiLessonsDatabaseEntities']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\andre\\Documents\\GitHub\\ElectriTracker\\ElectriTrackerService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SkiLessonsDatabaseEntities']/@connectionString" />
   </parameter>
 </parameters>

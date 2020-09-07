@@ -25,6 +25,7 @@
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -261,7 +262,9 @@
     <Content Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\ElectricTracker.pubxml" />
     <None Include="Properties\PublishProfiles\electritracker.pubxml" />
+    <None Include="Properties\PublishProfiles\ElectriTrackerService20200906014154 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\ski lessons service.pubxml" />
     <None Include="Properties\PublishProfiles\SkiLessons %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\SkiLessons - FTP.pubxml" />
